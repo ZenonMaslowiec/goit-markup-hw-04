@@ -63,6 +63,7 @@
           border: none;
           cursor: pointer;
           margin-top: 48px;
+          transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .mar 
@@ -201,6 +202,7 @@
 
         .hero 
         {
+          max-width: 1440px;
           height: 600px;
           background-color: #2E2F42;
           background-image: linear-gradient(to bottom,
@@ -308,18 +310,18 @@
           border: 1px solid #8E8F99;
           border-radius: 4px;
           /* margin-bottom: 30px; */
-          /* display: flex; */
-          /* align-items: center; */
-          /* justify-content: center; */
+          display: flex;
+          align-items: center;
+          justify-content: center;
           margin-bottom: 8px;
         }
 
-        .about-icon-item 
+        /* .about-icon-item  
         {
           width: 64px;
           height: 64px;
           margin: 24px 100px;
-        }
+        }  */
 
            
    /*========END-ABOUT========*/
@@ -384,33 +386,47 @@
         .icon-list 
         {
           display: flex;
+          justify-content: center;
           padding: 8px 16px 32px 16px;
           gap: 24px;
         }
 
+        .icon-link 
+        {
+         width: 100%;
+         height: 100%;
+         background-color: #4d5ae5;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         .icon 
         {
-          display: flex;
+          /* display: flex; */
           width: 40px;
           height: 40px;
-          border-radius: 50%;
-          align-items: center;
-          justify-content: center;
-          transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-          background-color: #4D5AE5;
+          /* border-radius: 50%; */
+          /* align-items: center; */
+          /* justify-content: center; */
+          /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+          /* background-color: #4D5AE5; */
           cursor: pointer;
         }
 
-        .icon:hover,
-        .icon:focus 
+        .icon-link:hover,
+        .icon-link:focus 
         {
-          background-color: #31D0AA;
-        }
+          background-color: #404bbf;
+        } 
 
         .icon-svg
         {
           width: 16px;
           height: 16px;
+          fill: #f4f4fd;
         }
 
     /*========END-AGENCY========*/
@@ -440,7 +456,8 @@
        .portfolio-img-list
        {
         width: 360px;
-        
+        transition: transform 250ms ease-in-out;
+        /* transform: translateY(100%); */
        }
 
        .box 
