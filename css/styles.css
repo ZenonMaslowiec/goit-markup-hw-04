@@ -82,6 +82,9 @@
           display: flex;
           align-items: center;
           border-bottom: 1px solid #e7e9fc;
+          box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 1px 6px rgba(46, 47, 66, 0.08);
         }
 
         .header .container 
@@ -125,15 +128,15 @@
           gap: 40px;
         }
 
-        .navigation-list-item
+        /* .navigation-list-item
         {
           position: relative;
-        }
-        .navigation-list-item:hover::after 
+        } */
+        /* .navigation-list-item:hover::after 
         {
           display: block;
-        }
-        .navigation-list-item::after 
+        } */
+      /* .navigation-list-item::after 
         {
           display: none;
           --height: 4px;
@@ -145,6 +148,26 @@
           position: absolute;
           left: 0;
           bottom: -24px;
+          bottom: calc(-1 x var(--height) - 5px);  
+          }  */
+
+        .navigation-list-link:hover::after 
+        {
+          display: block;
+        }
+
+        .navigation-list-link::after 
+        {
+          display: none;
+          --height: 4px;
+          border-radius: 2px;
+          content: "";
+          background-color: #404bbf;
+          width: 100%;
+          height: var(--height);
+          position: absolute;
+          left: 0;
+          bottom: -1px;
           /* bottom: calc(-1 x var(--height) - 5px);   */
         }
 
@@ -158,6 +181,9 @@
           color: #2E2F42;
           padding-top: 24px;
           padding-bottom: 24px;
+          position: relative;
+          color: #404bbf;
+          transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
             
         .address-list-mailto-phone
@@ -166,7 +192,8 @@
           line-height: 1.5;
           letter-spacing: 0.02em;
           text-decoration: none;
-          color: #434455; 
+          color: #434455;
+          transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .address 
@@ -579,12 +606,12 @@
         color: #F4F4FD;
       }
 
-      .footer-social-media 
+      /* .footer-social-media 
       {
-        /* width: 208px; */
-        /* height: 80px;  */
-        /* padding-left: 120px;  */
-      }
+        width: 208px;
+        height: 80px; 
+        padding-left: 120px; 
+      } */
 
       .footer-social 
       {
@@ -601,6 +628,14 @@
         display: flex;
         gap: 16px;
         /* padding-top: 16px; */
+      }
+
+      .footer-icon 
+      {
+        width: 40px;
+        height: 40px;
+        transition: background-color 8s cubic-bezier(0.4, 0, 0.2, 1);
+        /* cursor: pointer; */
       }
 
      .footer-icon-link 
